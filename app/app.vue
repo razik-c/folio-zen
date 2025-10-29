@@ -1,5 +1,7 @@
 <style src="~/assets/css/tailwind.css"></style>
 <template>
-  <div class="flex justify-center gap-5 items-center">
-  </div>
+  <article class="prose md:prose-tablet lg:prose-desktop">
+    <h1 class="">Heading</h1>
+    <p>Paragraph text…</p>
+  </article>
 </template>

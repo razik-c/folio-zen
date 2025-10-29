@@ -9,8 +9,18 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
+    "@nuxtjs/google-fonts",
     "nuxt-gtag",
   ],
+   googleFonts: {
+    families: {
+      Inter: [400, 500, 600, 700, 800],
+      Rubik: [400, 500, 600, 700, 800],
+    },
+    display: 'swap',
+    subsets: 'latin',
+    download: true, 
+  },
   runtimeConfig: {
     databaseUrl: process.env.DATABASE_URL,
   },
