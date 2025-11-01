@@ -1,0 +1,259 @@
+
+  <!-- <section class="py-32">
+    <div class="container">
+      <div class="grid grid-cols-12">
+        <div class="col-span-4"></div>
+        <div class="col-span-8 grid grid-cols-12">
+          <div class="col-span-2">
+            <p class="!text-[12px] !font-bold text-muted">Product Name</p>
+          </div>
+          <div class="col-span-2">
+            <p class="!text-[12px] !font-bold text-muted">Expiry Date</p>
+          </div>
+          <div class="col-span-2">
+            <p class="!text-[12px] !font-bold text-muted">Stock Count</p>
+          </div>
+          <div class="col-span-2">
+            <p class="!text-[12px] !font-bold text-muted text-center">Last Checked</p>
+          </div>
+
+          <div class="col-span-2">
+            <p class="!text-[12px] !font-bold text-muted text-center">Status</p>
+          </div>
+
+          <div class="col-span-12 grid grid-cols-12 items-center product-column mt-4">
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">Milk</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">20 Oct 2025</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">100</p>
+            </div>
+
+            <div class="col-span-2 text-center">
+              <p class="!text-[14px] !font-bold text-ink">-12 days</p>
+            </div>
+
+            <div class="col-span-2 flex justify-center items-center">
+              <p
+                class="!text-[12px] !font-bold text-white bg-red-500 min-w-[100px] text-center w-fit px-4 py-1 rounded-full">
+                Expired
+              </p>
+            </div>
+
+
+          </div>
+
+          <div class="border border-gray-200 rounded col-span-10 my-4"></div>
+
+          <div class="col-span-12 grid grid-cols-12 items-center product-column">
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">Yogurt</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">10 Nov 2025</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">50</p>
+            </div>
+
+            <div class="col-span-2 text-center">
+              <p class="!text-[14px] !font-bold text-ink">10 days</p>
+            </div>
+
+            <div class="col-span-2 flex justify-center items-center">
+              <p
+                class="!text-[12px] !font-bold text-white bg-green-400 min-w-[100px] text-center w-fit px-4 py-1 rounded-full">
+                Fresh
+              </p>
+            </div>
+
+
+          </div>
+        
+          <div class="border border-gray-200 rounded col-span-10 my-2"></div>
+
+          <div class="col-span-12 grid grid-cols-12 items-center product-column">
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">Cheese</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">15 Nov 2025</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">80</p>
+            </div>
+
+            <div class="col-span-2 text-center">
+              <p class="!text-[14px] !font-bold text-ink">15 days</p>
+            </div>
+
+            <div class="col-span-2 flex justify-center items-center">
+              <p
+                class="!text-[12px] !font-bold text-white bg-green-400 min-w-[100px] text-center w-fit px-4 py-1 rounded-full">
+                Fresh
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded col-span-10 my-2"></div>
+
+          <div class="col-span-12 grid grid-cols-12 items-center product-column">
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">Bread</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">02 Nov 2025</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">120</p>
+            </div>
+
+            <div class="col-span-2 text-center">
+              <p class="!text-[14px] !font-bold text-ink">2 days</p>
+            </div>
+
+            <div class="col-span-2 flex justify-center items-center">
+              <p
+                class="!text-[12px] !font-bold text-white bg-yellow-400 min-w-[100px] text-center w-fit px-4 py-1 rounded-full">
+                Low Days
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded col-span-10 my-2"></div>
+
+          <div class="col-span-12 grid grid-cols-12 items-center product-column">
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">Butter</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">28 Oct 2025</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">60</p>
+            </div>
+
+            <div class="col-span-2 text-center">
+              <p class="!text-[14px] !font-bold text-ink">-3 days</p>
+            </div>
+
+            <div class="col-span-2 flex justify-center items-center">
+              <p
+                class="!text-[12px] !font-bold text-white bg-red-500 min-w-[100px] text-center w-fit px-4 py-1 rounded-full">
+                Expired
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-gray-200 rounded col-span-10 my-2"></div>
+
+          <div class="col-span-12 grid grid-cols-12 items-center product-column">
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">Eggs</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">05 Nov 2025</p>
+            </div>
+
+            <div class="col-span-2">
+              <p class="!text-[14px] !font-bold text-ink">200</p>
+            </div>
+
+            <div class="col-span-2 text-center">
+              <p class="!text-[14px] !font-bold text-ink">5 days</p>
+            </div>
+
+            <div class="col-span-2 flex justify-center items-center">
+              <p
+                class="!text-[12px] !font-bold text-white bg-yellow-400 min-w-[100px] text-center w-fit px-4 py-1 rounded-full">
+                Low Days
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+  </section> -->
+  <!-- 
+  <section class="mt-12">
+    <div class="container py-16">
+      <div class="grid grid-cols-12 items-center gap-32">
+        <div class="col-span-6">
+          <h1>Why Track?</h1>
+          <div class="grid grid-cols-12 col-span-12 gap-16 mt-12">
+            <div class="col-span-6 text-start">
+              <p class="text-ink">
+                Because every item you track means less waste, more savings, and smarter inventory management.
+              </p>
+            </div>
+
+            <div class="col-span-6 text-start  ">
+              <p class="text-ink">
+                Identify which products expire fastest — so you can plan purchases more efficiently and avoid
+                overstocking.
+              </p>
+            </div>
+
+            <div class="col-span-6 text-start  ">
+              <p class="text-ink">
+                Spot recurring patterns in waste to uncover hidden inefficiencies and improve your ordering habits.
+              </p>
+            </div>
+
+            <div class="col-span-6 text-start ">
+              <p class="text-ink">
+                Track shelf life trends over time to make better business decisions and save both money and resources.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-6">
+          <NuxtImg src="/monitor.webp" alt="ExpiryAware logo" />
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section class="mt-12">
+    <div class="container py-16">
+      <div class="grid grid-cols-12 items-center gap-32">
+        <div class="col-span-6">
+          <h1>Why Choose ExpiryAware?</h1>
+        </div>
+        <div class="col-span-6">
+          <div class="relative">
+            <input type="checkbox" id="toggle3" class="toggle hidden" />
+            <label
+              class="title text-ink block font-bold text-[24px] pb-4 font-primary leading-tight border-b-2 cursor-pointer pe-12;"
+              for="toggle3">
+              What is the typical turnaround time for design requests?
+            </label>
+            <div class="content text-dark-50 overflow-hidden pb-4">
+              <p class="pt-4"><span class="text-primary font-bold">UImand</span> strives to fulfill most design requests
+                within a timeframe of two days or less. However, more intricate requests may necessitate additional time
+                to guarantee the highest quality outcome.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->

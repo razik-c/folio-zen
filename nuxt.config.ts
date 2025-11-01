@@ -11,7 +11,9 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxtjs/google-fonts",
     "nuxt-gtag",
+    "nuxt-charts",
   ],
+  plugins: ['@/plugins/chart.js'],
    googleFonts: {
     families: {
       Inter: [400, 500, 600, 700, 800],

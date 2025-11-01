@@ -1,5 +1,9 @@
 <template>
   <header class="site-section">
-    <h1>Hey there! Welcome to my Nuxt About.</h1>
+    <section>
+      <div class="container">
+        <h1>TEST</h1>
+      </div>
+    </section>
   </header>
 </template>

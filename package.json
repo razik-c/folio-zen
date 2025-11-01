@@ -16,10 +16,13 @@
     "@neondatabase/serverless": "^1.0.2",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@tailwindcss/typography": "^0.5.19",
+    "chart.js": "^4.5.1",
     "dotenv": "^17.2.3",
     "drizzle-orm": "^0.44.7",
     "nuxt": "^4.2.0",
+    "nuxt-charts": "^1.0.2",
     "vue": "^3.5.22",
+    "vue-chartjs": "^5.3.2",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {

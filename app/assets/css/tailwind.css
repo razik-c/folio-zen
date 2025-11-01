@@ -2,7 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #FFF;
+}
+
 .prose {
   max-width: none !important;
 }
 
+
+.title::before {
+  content:url('https://uimand.top/img/arrow-icon.svg');
+  position: absolute;
+  right: 20px;
+
+  transition: all 0.2s;
+}
+
+.content {
+  max-height: 0;
+  transition: max-height 0.2s;
+}
+
+.toggle:checked + .title + .content {
+  max-height: 500px;
+}
+.toggle:checked + .title::before {
+  transform: rotate(180deg) !important;
+}
+
+/* Minimal, neutral slider styling to match the screenshot */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  width: 100%;
+  background: rgba(0,0,0,0.2);
+  border-radius: 9999px;
+  outline: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #000;
+  cursor: pointer;
+  margin-top: -7px; /* center thumb on track */
+}
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #000;
+  cursor: pointer;
+  border: 0;
+}
+.slider::-moz-range-track {
+  height: 4px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 9999px;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* two duplicates => 50% width */
+}
+.animate-marquee { animation: marquee 18s linear infinite; }
