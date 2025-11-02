@@ -83,14 +83,12 @@
     </div>
   </section>
 
-
-
-  <section class="px-2 mt-32">
+  <section class="px-2 mt-12 xl:mt-32">
     <div class="bg-ink rounded-3xl">
-      <div class="container py-24  relative">
+      <div class="container py-12 xl:py-24  relative">
         <div class="grid grid-cols-12">
-          <div class="xl:col-start-3 xl:col-span-5 col-span-12 text-start">
-            <h5 class="text-gray-400"><span class="!text-[20px] xl:!text-[24px] !font-bold text-white !leading-[inherit]">
+          <div class="xl:col-start-3 xl:col-span-5 col-span-12 text-center xl:text-start">
+            <h5 class="text-white"><span class="!text-[20px] xl:!text-[24px] !font-bold text-white !leading-[inherit]">
                 Join a growing
               </span>
               network of <span class="!text-[20px] xl:!text-[24px] !font-bold text-white !leading-[inherit]">
@@ -101,18 +99,34 @@
               </span></h5>
           </div>
           <div class="col-span-6"></div>
-
           <div class="col-span-12 xl:col-span-4 xl:col-start-3 mt-2">
-            <p class="!font-bold text-white !text-[16px]">Data is power. Get detailed analytics of your wastage and
+            <p class="!font-bold text-white text-center xl:text-start !text-[16px]">Data is power. Get detailed analytics of your wastage and
               reduce your spending.</p>
-
-            <div class=" rounded-xl ps-2 pe-2 py-2 mt-6 w-fit">
-              <form action="" class="flex gap-2">
+            <div class=" rounded-full bg-primary ps-2 pe-2 py-2 mt-6 w-fit border-2 hidden xl:block">
+              <form action="" class="flex gap-2 border-2 bg-primary rounded-full">
+                <input type="text" class="bg-primary rounded-full px-4" placeholder="Your Email">
                 <Button to="/dashboard"
-                  class="group no-underline border-2 border-primary rounded-full ps-4 pe-2 py-2 text-primary flex items-center gap-4 cursor-pointer transition-colors duration-200 hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+                  class="group no-underline font-normal text-[16px] font-secondary bg-white rounded-full ps-4 pe-2 py-2 text-ink flex items-center gap-4 cursor-pointer transition-colors duration-200 hover:bg-tint primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
                   Join the Waitlist
                   <span
-                    class="bg-primary text-white rounded-full p-2 transition-colors duration-200 group-hover:bg-white group-hover:text-primary">
+                    class="bg-primary text-white rounded-full p-2 transition-colors duration-200 group-hover:bg-white group-hover:text-ink">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                      stroke="currentColor" class="size-4 transition-transform duration-200 group-hover:-rotate-45">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                  </span>
+                </Button>
+              </form>
+
+            </div>
+             <div class=" rounded-full  px-4 py-2 mt-6 w-full block xl:hidden">
+              <form action="" class="flex flex-col gap-2 rounded-full">
+                <input type="text" class="bg-ink rounded-full px-4 border-2 py-2" placeholder="Your Email">
+                <Button to="/dashboard"
+                  class="group no-underline w-full bg-black rounded-full ps-4 pe-2 py-2 text-white flex justify-between items-center gap-4 cursor-pointer transition-colors duration-200 hover:bg-black primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+                  Join the Waitlist
+                  <span
+                    class="bg-white text-primary rounded-full p-2 transition-colors duration-200 group-hover:bg-primary group-hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                       stroke="currentColor" class="size-4 transition-transform duration-200 group-hover:-rotate-45">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -145,8 +159,8 @@
           <p class="pt-2 text-ink text-center">Type, speak, snap, or stream, ExpiryAware has it all.</p>
         </div>
 
-        <div class="col-span-12 grid grid-cols-12 gap-x-12 gap-y-8
-         mt-12">
+        <div class="col-span-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-12 gap-x-6 gap-y-8 mt-12">
+
           <div class="col-span-12 md:col-span-4 p-2">
             <div class="flex items-center gap-12">
               <h1 class="text-primary">1</h1>
@@ -308,58 +322,49 @@
     </div>
   </section> -->
 
-  <section class="bg-surface mt-20">
-    <div class="container py-6 xl:py-12">
-      <div class="grid grid-cols-12 gap-8 items-center">
-        <div class="col-span-6 mt-6 pb-12">
-          <div class="col-span-12">
-            <div class="flex justify-start items-start">
-              <div class=" rounded-full">
-                <h6 class="!font-semibold !text-[13px] tracking-wider uppercase text-ink/60">
-                  How We Do It
-                </h6>
-              </div>
-            </div>
-          </div>
-          <div class="text-start max-w-2xl mt-2">
-            <h3 class="text-3xl md:text-4xl font-semibold text-ink leading-tight">
-              Powered by the world's most advanced AI models.
-            </h3>
-            <p class="pt-4 text-lg text-ink/70 leading-relaxed">
-              From Whisper to GPT-4, plus some of our inhouse magic code sprinkled in.
-            </p>
-          </div>
+
+
+  <section class="mt-20 px-5">
+    <div class="container rounded-3xl w-full min-h-[500px] p-8" style="background-image: url('/desert.avif');">
+      <div class="px-4 xl:px-12 py-16">
+        <div class="text-start">
+          <h3 class="text-white">Track everything effortlessly</h3>
+          <p class="text-white pt-1">Add expiry dates with voice, image, or barcode — all in seconds.</p>
         </div>
-        <div class="col-span-6 rounded-xl flex items-center gap-6">
-          <div class="rounded-2xl w-fit">
-            <NuxtImg src="/gpt.png" alt="ExpiryAware logo" width="200" height="100%" />
-          </div>
-          <!-- <div class="rounded-2xl w-fit">
-            <NuxtImg src="/whisper.png" alt="ExpiryAware logo" width="120" height="100%" />
-          </div> -->
-          <div class="rounded-2xl w-fit">
-            <NuxtImg src="/gemini.png" alt="ExpiryAware logo" width="200" height="100%" />
-          </div>
-          <div class="rounded-2xl w-fit">
-            <NuxtImg src="/claude.png" alt="ExpiryAware logo" width="200" height="100%" />
-          </div>
+
+        <div class="text-end mt-8">
+          <h3 class="text-white">AI that spots patterns</h3>
+          <p class="text-white pt-1">See which products expire fastest and plan purchases smarter.</p>
         </div>
+
+        <div class="text-start mt-8">
+          <h3 class="text-white">Instant expiry alerts</h3>
+          <p class="text-white pt-1">Get notified before items go bad and reduce unnecessary waste.</p>
+        </div>
+
+        <div class="text-end mt-8">
+          <h3 class="text-white">Multi-device sync</h3>
+          <p class="text-white pt-1">Access your tracked inventory anywhere — web, mobile, or tablet.</p>
+        </div>
+
       </div>
+
     </div>
   </section>
 
-  <section class="mt-12">
+  <section class="mt-16 pt-16">
     <div class="container">
       <div class="grid grid-cols-12 gap-6">
-        <div class="col-span-12 mb-12">
+        <div class="col-span-12 mb-5 xl:mb-12">
           <div class="text-center">
-            <h3 class="text-ink">Choose Your Plan</h3>
+            <h3 class="text-ink">Our Plans</h3>
+            <p>We can make it work with you</p>
           </div>
         </div>
-        <div class="col-span-4 rounded-2xl bg-gray-200 py-12">
-          <h2 class="text-center">FREE</h2>
+        <div class="col-span-12 xl:col-span-4 rounded-2xl bg-gray-200 py-8">
+          <h2 class="text-center pt-6">FREE</h2>
           <h1 class="!font-bold text-center">$0<span class="!font-bold"> per month</span></h1>
-          <div class="border border-dashed border-ink mt-9"></div>
+          <div class="border border-dashed border-ink/20 mt-7"></div>
           <div class="flex flex-col gap-4 p-12 text-primary">
             <div class="flex gap-4 tems-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -400,13 +405,13 @@
 
           </div>
         </div>
-        <div class="col-span-4 rounded-2xl border-[8px] border-primary py-12 relative">
+        <div class="col-span-12 xl:col-span-4 rounded-2xl border-[8px] border-primary py-12 relative">
           <div class="absolute right-1/2 translate-x-1/2 -top-5 bg-primary px-6 py-1 rounded">
             <p class="text-white !text-[12px] !font-bold">POPULAR</p>
           </div>
           <h2 class="text-center">PLUS</h2>
           <h1 class="!font-bold text-center">$9<span class="!font-bold"> per month</span></h1>
-          <div class="border border-dashed border-ink mt-7"></div>
+          <div class="border border-dashed border-ink/20 mt-7"></div>
           <div class="flex flex-col gap-4 p-12 text-primary">
             <div class="flex gap-4 tems-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -433,7 +438,7 @@
                   clip-rule="evenodd" />
               </svg>
 
-              <h6 class="text-ink">Smart waste analytics dashboard</h6>
+              <h6 class="text-ink">Smart analytics dashboard</h6>
             </div>
             <div class="flex gap-4 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -442,7 +447,7 @@
                   clip-rule="evenodd" />
               </svg>
 
-              <h6 class="text-ink">Multi-device sync and cloud backup</h6>
+              <h6 class="text-ink">Multi-device sync</h6>
             </div>
             <div class="flex gap-4 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -455,10 +460,10 @@
             </div>
           </div>
         </div>
-        <div class="col-span-4 rounded-2xl bg-gray-200 py-12">
+        <div class="col-span-12 xl:col-span-4 rounded-2xl bg-gray-200 py-12">
           <h2 class="text-center">Pro</h2>
           <h1 class="!font-bold text-center">$1 9<span class="!font-bold"> per month</span></h1>
-          <div class="border border-dashed border-ink mt-9"></div>
+          <div class="border border-dashed border-ink/20 mt-9"></div>
           <div class="flex flex-col gap-4 p-12 text-primary">
             <div class="flex gap-4 tems-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -512,6 +517,53 @@
   </section>
 
 
+
+  <!-- <section>
+    <div class="container">
+      <h2>Frequenty Asked Questions</h2>
+    </div>
+  </section> -->
+
+  <section class="bg-surface mt-20">
+    <div class="container py-6 xl:py-12">
+      <div class="grid grid-cols-12 gap-8 items-center">
+        <div class="col-span-12 xl:col-span-6 mt-6 pb-12">
+          <div class="col-span-12">
+            <div class="flex justify-start items-start">
+              <div class=" rounded-full">
+                <h6 class="!font-semibold !text-[13px] tracking-wider uppercase text-ink/60">
+                  How We Do It
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div class="text-start max-w-2xl mt-2">
+            <h3 class="text-3xl md:text-4xl font-semibold text-ink leading-tight">
+              Powered by the world's most advanced AI models.
+            </h3>
+            <p class="pt-4 text-lg text-ink/70 leading-relaxed">
+              From Whisper to GPT-4, plus some of our inhouse magic code sprinkled in.
+            </p>
+          </div>
+        </div>
+        <div class="col-span-12 xl:col-span-6 rounded-xl xl:flex grid grid-cols-12 items-center gap-6">
+              <div class="rounded-2xl w-fit col-span-6">
+            <NuxtImg src="/claude.png" alt="ExpiryAware logo" width="200" height="100%" />
+          </div>
+          <div class="rounded-2xl w-fit col-span-6">
+            <NuxtImg src="/gpt.png" alt="ExpiryAware logo" width="200" height="100%" />
+          </div>
+          <!-- <div class="rounded-2xl w-fit">
+            <NuxtImg src="/whisper.png" alt="ExpiryAware logo" width="120" height="100%" />
+          </div> -->
+          <div class="rounded-2xl w-fit xl:me-8 col-span-6">
+            <NuxtImg src="/gemini.png" alt="ExpiryAware logo" width="200" height="100%" />
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="py-12 xl:py-32">
     <div class="container">

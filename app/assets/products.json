@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "sku": "A101",
+    "name": "Yogurt",
+    "expiry": "2025-11-10",
+    "stock": 50,
+    "status": "Expiring Soon",
+    "lastChecked": "Today"
+  },
+  {
+    "id": "2",
+    "sku": "B202",
+    "name": "Cheese Block",
+    "expiry": "2025-12-05",
+    "stock": 120,
+    "status": "Fresh",
+    "lastChecked": "Today"
+  },
+  {
+    "id": "3",
+    "sku": "C303",
+    "name": "Milk 2L",
+    "expiry": "2025-11-02",
+    "stock": 20,
+    "status": "Expired",
+    "lastChecked": "Yesterday"
+  },
+  {
+    "id": "4",
+    "sku": "D404",
+    "name": "Butter Unsalted",
+    "expiry": "2025-11-18",
+    "stock": 80,
+    "status": "Fresh",
+    "lastChecked": "Today"
+  }
+]
