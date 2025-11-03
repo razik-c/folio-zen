@@ -13,17 +13,19 @@ export default defineNuxtConfig({
     "nuxt-gtag",
     "nuxt-charts",
   ],
-  plugins: ['@/plugins/chart.js'],
-   googleFonts: {
+  plugins: ["@/plugins/chart.js"],
+  googleFonts: {
     families: {
       Inter: [400, 500, 600, 700, 800],
       Rubik: [400, 500, 600, 700, 800],
     },
-    display: 'swap',
-    subsets: 'latin',
-    download: true, 
+    display: "swap",
+    subsets: "latin",
+    download: true,
   },
   runtimeConfig: {
     databaseUrl: process.env.DATABASE_URL,
+    fastapiUrl: process.env.FASTAPI_URL || "http://localhost:8000",
+    public: {},
   },
 });

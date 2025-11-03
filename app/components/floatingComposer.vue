@@ -1,21 +1,23 @@
 <template>
   <div
     v-show="open"
-    class="fixed left-1/2 -translate-x-1/2 bottom-6 w-1/3 rounded-xl"
+    class="fixed left-1/2 -translate-x-1/2 bottom-32 w-1/3 rounded-xl z-50"
   >
-    <form @submit.prevent="send" class="flex items-center gap-2 px-2 bg-white rounded-full shadow-xl border border-black/5">
+    <form
+      @submit.prevent="send"
+      class="flex items-center gap-2 px-2 bg-ink rounded-full shadow-xl border border-white/15"
+    >
       <div class="flex w-full">
         <textarea
           ref="ta"
           v-model="text"
           :rows="1"
           @input="autoGrow"
-          @keydown.enter.exact.prevent="send"        
-          @keydown.shift.enter.prevent="newline"     
-          @keydown.esc.prevent="maybeClose"          
-          placeholder="Type your product…  e.g. A101, Yogurt, 2025-11-10, 50, Fresh"
-          class="w-full max-h-40 resize-none bg-white m-2 rounded-lg px-3 py-3 text-[14px] leading-5 outline-none
-                 focus:ring-none focus:ring-none focus:border-none"
+          @keydown.enter.exact.prevent="send"
+          @keydown.shift.enter.prevent="newline"
+          @keydown.esc.prevent="maybeClose"
+          placeholder="Add your product here eg - SKU/ Name/ Date/ Count"
+          class="w-full max-h-40 resize-none bg-ink text-white m-2 rounded-lg px-3 py-3 text-[14px] leading-5 outline-none"
         />
       </div>
 
@@ -25,7 +27,14 @@
         class="p-2 rounded-full text-white bg-primary disabled:opacity-50"
         title="Send"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-5"
+        >
           <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
         </svg>
       </button>
@@ -36,24 +45,39 @@
 <script setup lang="ts">
 import { ref, nextTick, onMounted, onBeforeUnmount } from 'vue'
 
+const emit = defineEmits<{
+  (e: 'product-added', product: {
+    id: string
+    sku: string
+    product_name: string
+    expiry_date: string | null
+    count: number
+    status: string
+  }): void
+  (e: 'product-updated', payload: {
+    tempId: string
+    sku?: string
+    product_name?: string
+    expiry_date?: string
+    count?: number
+    status?: string
+  }): void
+}>()
+
 const open = ref(true)
 const text = ref('')
 const sending = ref(false)
 const ta = ref<HTMLTextAreaElement | null>(null)
 
-// open when user types anywhere not inside an input/textarea/contentEditable
 function onGlobalKey(e: KeyboardEvent) {
   const el = document.activeElement as HTMLElement | null
   if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return
   if (e.metaKey || e.ctrlKey || e.altKey) return
-
-  // hotkeys
   if (e.key === '/') {
     e.preventDefault()
     summon('')
     return
   }
-
   if (e.key.length === 1) {
     e.preventDefault()
     summon(e.key)
@@ -66,15 +90,9 @@ function onGlobalKey(e: KeyboardEvent) {
 
 function summon(initial: string) {
   open.value = true
-  if (initial) {
-    text.value = text.value ? text.value + initial : initial
-  }
+  if (initial) text.value = text.value ? text.value + initial : initial
   nextTick(() => {
-    if (!ta.value) return
-    ta.value.focus()
-    // move caret to end
-    const len = text.value.length
-    ta.value.selectionStart = ta.value.selectionEnd = len
+    ta.value?.focus()
     autoGrow()
   })
 }
@@ -105,14 +123,51 @@ function newline() {
 async function send() {
   const payload = text.value.trim()
   if (!payload) return
-  sending.value = true
 
+  // optimistic insert
+  const tempId = `temp-${Date.now()}`
+  emit('product-added', {
+    id: tempId,
+    sku: '',
+    product_name: payload.split(' ')[0] || 'New product',
+    expiry_date: null,
+    count: 0,
+    status: 'Pending'
+  })
 
+  // clear UI fast
   text.value = ''
   await nextTick()
   autoGrow()
+
+  sending.value = true
+  try {
+    const res = await $fetch('/api/parse', {
+      method: 'POST',
+      body: { text: payload }
+    }) as {
+      sku: string
+      product_name: string
+      expiry_date: string
+      count: number
+    }
+
+    emit('product-updated', {
+      tempId,
+      sku: res.sku,
+      product_name: res.product_name,
+      expiry_date: res.expiry_date,
+      count: res.count,
+      status: 'Fresh'
+    })
+  } catch (err) {
+    console.error('parse failed', err)
+    emit('product-updated', {
+      tempId,
+      status: 'Error'
+    })
+  }
   sending.value = false
-  open.value = false
 }
 
 onMounted(() => window.addEventListener('keydown', onGlobalKey))

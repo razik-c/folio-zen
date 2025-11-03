@@ -9,19 +9,19 @@
       <ul class="flex items-center gap-2 font-primary list-none">
 
         <li>
-          <NuxtLink to="/about" :aria-current="isActive('/about') ? 'page' : undefined" class="nav-link hover:bg-gray-100 rounded-full py-2 px-3"
+          <NuxtLink to="/about" :aria-current="isActive('/about') ? 'page' : undefined" class="nav-link hover:bg-gray-200 rounded-full py-2 px-3"
             :class="isActive('/about') ? 'text-primary font-medium' : 'hover:underline'">About</NuxtLink>
         </li>
 
 
         <li>
-          <NuxtLink to="/demo" :aria-current="isActive('/demo') ? 'page' : undefined" class="nav-link hover:bg-gray-100 rounded-full py-2 px-3"
+          <NuxtLink to="/demo" :aria-current="isActive('/demo') ? 'page' : undefined" class="nav-link hover:bg-gray-200 rounded-full py-2 px-3"
             :class="isActive('/demo') ? 'text-primary font-medium' : 'hover:underline'">Demo</NuxtLink>
         </li>
 
 
         <li>
-          <NuxtLink to="/contact" :aria-current="isActive('/contact') ? 'page' : undefined" class="nav-link hover:bg-gray-100 rounded-full py-2 px-3" 
+          <NuxtLink to="/contact" :aria-current="isActive('/contact') ? 'page' : undefined" class="nav-link hover:bg-gray-200 rounded-full py-2 px-3" 
             :class="isActive('/contact') ? 'text-primary font-medium' : 'hover:underline'">Contact Us</NuxtLink>
         </li>
       </ul>
