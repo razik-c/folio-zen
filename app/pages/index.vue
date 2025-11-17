@@ -17,10 +17,10 @@
           <div class="relative w-full overflow-hidden">
             <div class="flex gap-12 whitespace-nowrap animate-marquee will-change-transform">
               <p class="!text-[14px] text-ink/80">
-                • New feature: barcode scanning • AI expiry detection now faster • Multi-device sync enabled
+                • New: live company search • Auto-personalised cold emails • AI reply summaries with next steps
               </p>
               <p class="!text-[14px] text-ink/80" aria-hidden="true">
-                • New feature: barcode scanning • AI expiry detection now faster • Multi-device sync enabled
+                • New: live company search • Auto-personalised cold emails • AI reply summaries with next steps
               </p>
             </div>
 
@@ -36,14 +36,17 @@
         </div>
       </div>
       <div class="grid grid-cols-12 items-center mt-8">
-        <div class="col-span-12 text-center">
-          <h1>Manage Your Products <br class="hidden xl:block">Safely & Smartly</h1>
+        <div class="col-span-12 xl:col-span-8 text-center xl:col-start-3">
+          <h1>A smarter way to handle <br class="hidden xl:block"></br>all your outreach.</h1>
           <div class="flex justify-center items-center">
-            <p class="pt-4 text-center">ExpiryAware reminds you before items expire, helping you avoid <br> </br>waste
-              and stay
-              safe.</p>
+            <div class="max-w-[600px]">
+              <p class="pt-4 text-center">
+                Source the best leads, send them a automised custom email, and turn every reply into a clear summary and
+                next step.
+              </p>
+            </div>
           </div>
-          <div class="flex pt-6 justify-center items-center gap-2">
+          <div class="flex pt-6 justify-center items-center gap-2 mt-6">
             <NuxtLink to="/contact-us"
               class="group no-underline border-2 border-primary rounded-full ps-4 pe-2 py-2 text-primary flex items-center gap-4 cursor-pointer transition-colors duration-200 hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
               Contact Us
@@ -61,304 +64,260 @@
             </NuxtLink>
           </div>
         </div>
-        <!-- <div class="xl:col-span-4">
-          <div class="flex gap-2 items-end">
-            <div class="rounded-full border-2 border-surface shadow p-2 not-prose">
-              <div class="w-full h-full">
-                <NuxtImg src="/avatar.png" alt="ExpiryAware logo" width="64" height="64" />
-              </div>
-            </div>
-            <div class="flex flex-col">
-              <div class="bg-surface p-5 rounded-md">
-                <p class="!text-[16px]">ExpiryAware helped me take the guess work out and focus my budget where it was
-                  needed.</p>
-              </div>
-              <div class="my-2"></div>
-            </div>
-          </div>
-        </div> -->
       </div>
-
-
     </div>
   </section>
 
-  <section class="px-2 mt-12 xl:mt-32">
-    <div class="bg-ink rounded-3xl">
-      <div class="container py-12 xl:py-24  relative">
+  <section class="px-5 xl:px-0 mt-16 xl:mt-32">
+    <div class="container bg-ink rounded-[48px] pt-12 pb-4 xl:py-32">
+      <div class="container relative">
         <div class="grid grid-cols-12">
           <div class="xl:col-start-3 xl:col-span-5 col-span-12 text-center xl:text-start">
-            <h5 class="text-white"><span class="!text-[20px] xl:!text-[24px] !font-bold text-white !leading-[inherit]">
-                Join a growing
-              </span>
-              network of <span class="!text-[20px] xl:!text-[24px] !font-bold text-white !leading-[inherit]">
-                businesses
-              </span> that rely on our solutions to drive <span
-                class="!text-[20px] xl:!text-[24px] !font-bold text-white !leading-[inherit]">
-                success
-              </span></h5>
+            <h1 class="text-white">
+              Discover, Connect and Improve
+            </h1>
           </div>
-          <div class="col-span-6"></div>
-          <div class="col-span-12 xl:col-span-4 xl:col-start-3 mt-2">
-            <p class="!font-bold text-white text-center xl:text-start !text-[16px]">Data is power. Get detailed analytics of your wastage and
-              reduce your spending.</p>
-            <div class=" rounded-full bg-primary ps-2 pe-2 py-2 mt-6 w-fit border-2 hidden xl:block">
-              <form action="" class="flex gap-2 border-2 bg-primary rounded-full">
-                <input type="text" class="bg-primary rounded-full px-4" placeholder="Your Email">
-                <Button to="/dashboard"
-                  class="group no-underline font-normal text-[16px] font-secondary bg-white rounded-full ps-4 pe-2 py-2 text-ink flex items-center gap-4 cursor-pointer transition-colors duration-200 hover:bg-tint primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
-                  Join the Waitlist
-                  <span
-                    class="bg-primary text-white rounded-full p-2 transition-colors duration-200 group-hover:bg-white group-hover:text-ink">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                      stroke="currentColor" class="size-4 transition-transform duration-200 group-hover:-rotate-45">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </span>
-                </Button>
-              </form>
-
-            </div>
-             <div class=" rounded-full  px-4 py-2 mt-6 w-full block xl:hidden">
-              <form action="" class="flex flex-col gap-2 rounded-full">
-                <input type="text" class="bg-ink rounded-full px-4 border-2 py-2" placeholder="Your Email">
-                <Button to="/dashboard"
-                  class="group no-underline w-full bg-black rounded-full ps-4 pe-2 py-2 text-white flex justify-between items-center gap-4 cursor-pointer transition-colors duration-200 hover:bg-black primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
-                  Join the Waitlist
-                  <span
-                    class="bg-white text-primary rounded-full p-2 transition-colors duration-200 group-hover:bg-primary group-hover:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                      stroke="currentColor" class="size-4 transition-transform duration-200 group-hover:-rotate-45">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </span>
-                </Button>
-              </form>
-
-            </div>
+          <div class="col-span-12 text-center xl:text-start xl:col-span-6 xl:col-start-3 mt-4">
+            <p class="text-white">
+              Find ideal companies, automate your cold emails, and understand which audiences and messages reply, so you
+              can improve each campaign and repeat what works.
+            </p>
           </div>
         </div>
-        <div class="xl:absolute bottom-[-80px] right-32 flex justify-center items-center">
-          <NuxtImg src="/phone.png" alt="ExpiryAware logo" width="260" height="100%" />
+        <div class="xl:absolute bottom-[-150px] right-32 flex justify-center items-center">
+          <NuxtImg src="/phone.png" alt="Outreach platform preview" class="max-h-[500px]" width="260" height="100%" />
         </div>
       </div>
 
     </div>
   </section>
 
-  <section>
-    <div class="container py-6 xl:pb-12 xl:pt-32">
+
+
+
+  <section class="mt-16 xl:mt-32">
+    <div class="container">
+      <div class="xl:grid grid-cols-12 items-center gap-16">
+        <div class="col-span-12 xl:col-span-6 mt-4">
+          <div class="flex flex-col">
+            <div class="text-start">
+              <h1 class="text-ink">Your time is expensive, don't waste it.</h1>
+            </div>
+            <p class="pt-4 text-ink text-start">
+              Let the system handle the busywork while you focus on real conversations.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-span-12 xl:col-span-6 xl:col-start-7 
+            flex flex-col xl:grid grid-cols-1 xl:grid-cols-2 gap-8 w-full mt-6 xl:mt-0 ">
+
+          <div class="flex items-start gap-6 w-full">
+            <div class="flex flex-col w-full">
+              <h5 class="text-ink">Manual Prospect Lists</h5>
+              <p class="pt-3">
+                Add companies or people you already know, then let automated campaigns handle the outreach and tracking.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6 w-full">
+            <div class="flex flex-col w-full">
+              <h5 class="text-ink mb-2">Niche Company Search</h5>
+              <p class="pt-3">
+                Search by niche, location, and size to instantly build targeted lists of companies and decision makers.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6 w-full">
+            <div class="flex flex-col w-full">
+              <h5 class="text-ink mb-2">AI Email Writing</h5>
+              <p class="pt-3">
+                Describe what you want. The system drafts personalised, on-brand cold emails for every prospect.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6 w-full">
+            <div class="flex flex-col w-full">
+              <h5 class="text-ink mb-2">Reply Summaries & More</h5>
+              <p class="pt-3">
+                Every reply is summarised with sentiment, intent, and suggested next action so you can move fast.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="mt-16 xl:mt-32">
+
+    <div class="container">
       <div class="grid grid-cols-12 items-center">
-
-        <div class="col-span-12 mt-4">
-          <div class="text-center">
-            <h3 class="text-ink">Find What Works For You</h3>
-          </div>
+        <div class="col-span-12 xl:col-span-6 xl:col-start-4 text-center">
+          <h1>Who we help and why they choose us</h1>
         </div>
-        <div class="col-span-8 col-start-3">
-          <p class="pt-2 text-ink text-center">Type, speak, snap, or stream, ExpiryAware has it all.</p>
+        <div class="col-span-12 xl:col-span-6 xl:col-start-4 text-center">
+          <p class="pt-4">Discover how our platform empowers users to find the right companies, launch effective
+            campaigns, and get more replies.</p>
         </div>
 
-        <div class="col-span-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-12 gap-x-6 gap-y-8 mt-12">
+        <div class="col-span-full mb-16"></div>
+        <div class="col-span-12 xl:col-span-4 xl:col-start-3">
+          <NuxtImg src="/laptop-guy.png" class="rounded-[40px]" alt="Outreach platform preview" width="580"
+            height="400" />
+        </div>
+        <div class="col-span-12 xl:col-span-5 xl:col-start-8  text-center xl:text-start">
+          <h4>Connecting People With Better Career Opportunities.</h4>
+          <p class="pt-4">Users have been discovering companies in their niche and contacting hiring teams directly to
+            uncover real
+            opportunities faster.
+          </p>
+        </div>
 
-          <div class="col-span-12 md:col-span-4 p-2">
-            <div class="flex items-center gap-12">
-              <h1 class="text-primary">1</h1>
-              <div class="flex flex-col">
-                <h5 class="text-ink font-semibold text-xl mb-3">Manual Entry</h5>
-                <p class="xl:pt-2 text-ink">
-                  Add product name, quantity, and expiry date manually quick, clear, and precise.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-span-12 md:col-span-4 p-2">
-            <div class="flex items-center gap-12">
-              <h1 class="text-primary">2</h1>
-              <div class="flex flex-col">
-                <h5 class="text-ink font-semibold text-xl mb-3">Voice Command</h5>
-                <p class="xl:pt-2 text-ink">
-                  Speak naturally ExpiryAware records product details hands-free and accurately.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="col-span-12 xl:col-span-4 xl:col-start-8">
+          <NuxtImg src="/digital-agency.png" class="rounded-[40px] block xl:hidden" alt="Outreach platform preview"
+            width="580" height="400" />
+        </div>
 
-          <div class="col-span-12 md:col-span-4 p-2">
-            <div class="flex items-center gap-12">
-              <h1 class="text-primary">3</h1>
-              <div class="flex flex-col">
-                <h5 class="text-ink font-semibold text-xl mb-3">Smart Capture</h5>
-                <p class="xl:pt-2 text-ink">
-                  Snap or upload a photo ExpiryAware instantly detects and logs data.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="col-span-12 xl:col-span-5 xl:col-start-2  text-center xl:text-start">
+          <h4>Digital Agencies With the Right Companies.</h4>
+          <p class="pt-4">
+            Agencies have been finding niche-specific businesses and reaching key decision-makers to secure more
+            qualified opportunities.
+          </p>
+        </div>
 
-          <div class="col-span-12 md:col-span-4 p-2">
-            <div class="flex items-center gap-10">
-              <h1 class="text-primary">4</h1>
-              <div class="flex flex-col">
-                <h5 class="text-ink font-semibold text-xl mb-3">Barcode Scanning</h5>
-                <p class="xl:pt-2 text-ink">
-                  Track expiry data in real time through barcode scanning fast, seamless, and accurate.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="col-span-12 xl:col-span-4 xl:col-start-8">
+          <NuxtImg src="/digital-agency.png" class="rounded-[40px] hidden xl:block" alt="Outreach platform preview"
+            width="580" height="400" />
+        </div>
+        <div class="col-span-12 xl:col-span-4 xl:col-start-3">
+          <NuxtImg src="/freelancers.png" class="rounded-[40px]" alt="Outreach platform preview" width="580"
+            height="400" />
+        </div>
+        <div class="col-span-12 xl:col-span-5 xl:col-start-8  text-center xl:text-start">
+          <h4>Freelancers and Web Developers</h4>
+          <p class="pt-4">
+            Developers have been finding local companies without an online presence and contacting them directly to
+            convert these gaps into real projects.
+          </p>
+        </div>
+
+        <div class="col-span-12 xl:col-span-4 xl:col-start-8 block xl:hidden">
+          <NuxtImg src="/manymore.png" class="rounded-[40px]" alt="Outreach platform preview" width="580"
+            height="400" />
+        </div>
+
+        <div class="col-span-12 xl:col-span-5 xl:col-start-2 text-center xl:text-start">
+          <h4>And Many Many More…</h4>
+          <p class="pt-4">
+            From sales teams and videographers to consultants and service providers, users across sectors benefit from
+            our platform.
+          </p>
+        </div>
+
+        <div class="col-span-12 xl:col-span-4 xl:col-start-8 hidden xl:block">
+          <NuxtImg src="/manymore.png" class="rounded-[40px]" alt="Outreach platform preview" width="580"
+            height="400" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- <div class="col-span-4">
-    <div class="bg-surface rounded-xl px-8 pt-8 pb-4">
-      <h6 class="text-center">Analytics</h6>
-      <div class="flex gap-2 mt-10 items-end justify-center">
-        <div class="flex-col gap-2 items-end justify-end">
-          <div class="bg-green-400 w-16 h-32 rounded-md"></div>
-          <div class="bg-red-400 w-16 h-10 rounded-md mt-1"></div>
-          <p class="!text-[12px] !font-bold text-muted/80 text-center pt-2">Jan</p>
-        </div>
-        <div class="flex-col gap-2 items-end justify-end">
-          <div class="bg-green-400 w-16 h-48 rounded-md"></div>
-          <div class="bg-red-400 w-16 h-8 rounded-md mt-1"></div>
-          <p class="!text-[12px] !font-bold text-muted/80 text-center pt-2">Feb</p>
-        </div>
-        <div class="flex-col gap-2 items-end justify-end">
-          <div class="bg-green-400 w-16 h-16 rounded-md"></div>
-          <div class="bg-red-400 w-16 h-32 rounded-md mt-1"></div>
-          <p class="!text-[12px] !font-bold text-muted/80 text-center pt-2">Mar</p>
-        </div>
-        <div class="flex-col gap-2 items-end justify-end">
-          <div class="bg-green-400 w-16 h-32 rounded-md"></div>
-          <div class="bg-red-400 w-16 h-20 rounded-md mt-1"></div>
-          <p class="!text-[12px] !font-bold text-muted/80 text-center pt-2">Apr</p>
-        </div>
-        <div class="flex-col gap-2 items-end justify-end">
-          <div class="bg-green-400 w-16 h-24 rounded-md"></div>
-          <div class="bg-red-400 w-16 h-10 rounded-md mt-1"></div>
-          <p class="!text-[12px] !font-bold text-muted/80 text-center pt-2">May</p>
-        </div>
-
-      </div>
-    </div>
-  </div> -->
-
-  <!-- <section class="my-32">
-    <div class="grid"></div>
-    <div class="container relative">
-      <div
-        class="bg-white rounded-full p-5 mt-16 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 shadow-lg z-50">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="bg-ink" class="size-6">
-          <path
-            d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
-        </svg>
-      </div>
-      <div class="grid grid-cols-12 relative gap-2">
-        <div class="col-span-12 mt-4">
-          <div class="text-center">
-            <h3 class="text-ink">Find What Works For You</h3>
-          </div>
-        </div>
-        <div class="col-span-8 col-start-3 mb-8">
-          <p class="pt-2 text-ink text-center">Type, speak, snap, or stream, ExpiryAware has it all.</p>
-        </div>
-        <div
-          class="px-2 xl:px-8 col-span-6 xl:col-start-4 xl:col-span-3 bg-primary rounded-l-2xl rounded-t-2xl py-16 shadow-sm z-10 ">
-          <div class="col-span-12 mt-4">
-            <div class="text-center">
-              <h4 class="text-white !text-[14px] xl:!text-[32px]">Manual Entry</h4>
-            </div>
-          </div>
-          <div class="col-span-12 pt-4">
-            <p class="text-white text-center !text-[12px] xl:!text-[20px]">
-              Product name, quantity, and expiry date manually quick, clear, and precise.
-            </p>
-          </div>
-        </div>
-
-        <div class="px-2 xl:px-8 col-span-6  xl:col-span-3 bg-primary rounded-r-2xl rounded-t-2xl shadow-md py-16 z-20">
-          <div class="col-span-12 mt-4">
-            <div class="text-center">
-              <h4 class="text-white !text-[14px] xl:!text-[32px]">Voice Command</h4>
-            </div>
-          </div>
-          <div class="col-span-12  pt-4">
-            <p class="text-white text-center !text-[12px] xl:!text-[20px] ">
-              Speak naturally the system records product details hands-free.
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="col-span-6 px-2 xl:px-8 xl:col-start-4 xl:col-span-3 items-center bg-primary rounded-l-2xl rounded-b-2xl py-16 z-30">
-          <div class="col-span-12 mt-4">
-            <div class="text-center">
-              <h4 class="text-white !text-[14px] xl:!text-[32px]">Smart Capture</h4>
-            </div>
-          </div>
-          <div class="col-span-12 pt-4">
-            <p class=" text-white text-center !text-[12px] xl:!text-[20px]">
-              From product labels to expiry prints, our visual AI detects and log data.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-span-6 xl:col-span-3 px-2 xl:px-8 bg-primary rounded-r-2xl rounded-b-2xl shadow-xl py-16 z-40">
-          <div class="col-span-12 mt-4">
-            <div class="text-center">
-              <h4 class="text-white !text-[14px] xl:!text-[32px]">Scanning</h4>
-            </div>
-          </div>
-          <div class="col-span-12 pt-4">
-            <p class="text-white text-center !text-[12px] xl:!text-[20px]">
-              Instantly add products and data by scanning their barcodes.
-            </p>
-          </div>
+  <section class="mt-20 overflow-hidden">
+    <div class="container">
+      <div class="grid grid-cols-12 gap-4">
+        <div class="col-span-12">
+          <h1>Everything Our Platform Offers</h1>
+          <p class="pt-4">
+            A complete set of tools designed to make your outreach faster and more effective.
+          </p>
         </div>
       </div>
     </div>
-  </section> -->
 
+    <div class="mt-20 container">
+      <ClientOnly>
+        <div class="relative">
 
+          <swiper-container ref="containerRef" :slides-per-view="'auto'" :space-between="32" :init="false"
+            class="mt-8 !overflow-visible">
+            <swiper-slide v-for="(item, idx) in features" :key="idx" class="!w-[240px] sm:!w-[280px] md:!w-[600px]">
+              <div class="flex flex-col items-start gap-4 relative">
+                <div class="flex flex-col max-w-[400px]">
+                  <p>[{{ idx + 1 }}]</p>
+                  <h5 class="text-ink pt-2">{{ item.title }}</h5>
+                  <p class="text-sm text-gray-600 pt-2">
+                    {{ item.body }}
+                  </p>
+                </div>
 
-  <section class="mt-20 px-5">
-    <div class="container rounded-3xl w-full min-h-[500px] p-8" style="background-image: url('/desert.avif');">
-      <div class="px-4 xl:px-12 py-16">
-        <div class="text-start">
-          <h3 class="text-white">Track everything effortlessly</h3>
-          <p class="text-white pt-1">Add expiry dates with voice, image, or barcode — all in seconds.</p>
+                <NuxtImg :src="item.image" width="700" height="400" class="object-cover xl:min-h-[400px]" />
+                <div
+                  class="absolute bottom-[-150px] rounded-[24px] left-1/2 -translate-x-1/2 -translate-y-1/2 xl:w-[500px] xl:h-[300px] bg-white border-[8px] border-surface">
+                  <NuxtImg src="/dashboard.png" width="100%" height="100%"
+                    class="object-cover m-0 p-0 rounded-[12px] max-w-[240px] xl:max-w-[485px]" />
+                </div>
+              </div>
+            </swiper-slide>
+          </swiper-container>
+
         </div>
 
-        <div class="text-end mt-8">
-          <h3 class="text-white">AI that spots patterns</h3>
-          <p class="text-white pt-1">See which products expire fastest and plan purchases smarter.</p>
+        <div class="w-full flex justify-center items-center mt-20 xl:mt-32">
+          <div class="pointer-events-none flex items-center">
+            <div class="flex pointer-events-auto gap-6 items-center">
+
+              <button class="rounded-full bg-muted/15 flex items-center justify-center" @click="swiper.prev()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-5 mx-4 my-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+              </button>
+
+              <div class="rounded-full bg-muted/15 flex items-center justify-center px-10 py-5">
+                <div class="flex justify-center items-center gap-2">
+                  <button v-for="(item, i) in features" :key="'dot-' + i" class="h-2 w-2 rounded-full transition-all"
+                    :class="i === activeIndex ? 'bg-ink scale-110' : 'bg-ink/40'" />
+                </div>
+              </div>
+
+              <button class="rounded-full bg-muted/15 flex items-center justify-center" @click="swiper.next()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-5 mx-4 my-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </button>
+
+            </div>
+          </div>
         </div>
 
-        <div class="text-start mt-8">
-          <h3 class="text-white">Instant expiry alerts</h3>
-          <p class="text-white pt-1">Get notified before items go bad and reduce unnecessary waste.</p>
-        </div>
-
-        <div class="text-end mt-8">
-          <h3 class="text-white">Multi-device sync</h3>
-          <p class="text-white pt-1">Access your tracked inventory anywhere — web, mobile, or tablet.</p>
-        </div>
-
-      </div>
-
+      </ClientOnly>
     </div>
+
   </section>
 
-  <section class="mt-16 pt-16">
+
+
+  <section class="mt-16 xl:mt-32">
     <div class="container">
       <div class="grid grid-cols-12 gap-6">
         <div class="col-span-12 mb-5 xl:mb-12">
-          <div class="text-center">
-            <h3 class="text-ink">Our Plans</h3>
-            <p>We can make it work with you</p>
+          <div class="text-center flex justify-center items-center flex-col gap-2">
+
+            <h1 class="text-ink">
+              Our plans
+            </h1>
+            <p>
+              Pick a plan that matches how much you want to send.
+            </p>
           </div>
         </div>
         <div class="col-span-12 xl:col-span-4 rounded-2xl bg-gray-200 py-8">
@@ -373,7 +332,7 @@
                   clip-rule="evenodd" />
               </svg>
 
-              <h6 class="text-ink">Track up to 20 products</h6>
+              <h6 class="text-ink">Up to 50 contacts stored</h6>
             </div>
             <div class="flex gap-4 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -382,7 +341,7 @@
                   clip-rule="evenodd" />
               </svg>
 
-              <h6 class="text-ink">Manual expiry entry</h6>
+              <h6 class="text-ink">One outbound campaign</h6>
             </div>
             <div class="flex gap-4 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -391,7 +350,7 @@
                   clip-rule="evenodd" />
               </svg>
 
-              <h6 class="text-ink">Barcode Scanner</h6>
+              <h6 class="text-ink">Basic niche/company search</h6>
             </div>
             <div class="flex gap-4 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -400,7 +359,7 @@
                   clip-rule="evenodd" />
               </svg>
 
-              <h6 class="text-ink">Expiry Alerts</h6>
+              <h6 class="text-ink">AI reply summaries (lite)</h6>
             </div>
 
           </div>
@@ -420,7 +379,7 @@
                   clip-rule="evenodd" />
               </svg>
 
-              <h6 class="text-ink">Unlimited products</h6>
+              <h6 class="text-ink">Unlimited contacts & campaigns</h6>
             </div>
             <div class="flex gap-4 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -429,7 +388,7 @@
                   clip-rule="evenodd" />
               </svg>
 
-              <h6 class="text-ink">AI detection (image + voice)</h6>
+              <h6 class="text-ink">AI email writing & reply analysis</h6>
             </div>
             <div class="flex gap-4 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -447,7 +406,7 @@
                   clip-rule="evenodd" />
               </svg>
 
-              <h6 class="text-ink">Multi-device sync</h6>
+              <h6 class="text-ink">Multi-device access</h6>
             </div>
             <div class="flex gap-4 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -462,7 +421,7 @@
         </div>
         <div class="col-span-12 xl:col-span-4 rounded-2xl bg-gray-200 py-12">
           <h2 class="text-center">Pro</h2>
-          <h1 class="!font-bold text-center">$1 9<span class="!font-bold"> per month</span></h1>
+          <h1 class="!font-bold text-center">$19<span class="!font-bold"> per month</span></h1>
           <div class="border border-dashed border-ink/20 mt-9"></div>
           <div class="flex flex-col gap-4 p-12 text-primary">
             <div class="flex gap-4 tems-center">
@@ -481,7 +440,16 @@
                   clip-rule="evenodd" />
               </svg>
 
-              <h6 class="text-ink">API access for integrations</h6>
+              <h6 class="text-ink">API access & CRM integrations</h6>
+            </div>
+            <div class="flex gap-4 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd"
+                  d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                  clip-rule="evenodd" />
+              </svg>
+
+              <h6 class="text-ink">Advanced routing & permissions</h6>
             </div>
             <div class="flex gap-4 items-center">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -499,108 +467,197 @@
                   clip-rule="evenodd" />
               </svg>
 
-              <h6 class="text-ink">Early feature access</h6>
-            </div>
-            <div class="flex gap-4 items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                <path fill-rule="evenodd"
-                  d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                  clip-rule="evenodd" />
-              </svg>
-
-              <h6 class="text-ink">Team access (up to 5 users)</h6>
+              <h6 class="text-ink">Team access (up to 10 users)</h6>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-
-
-  <!-- <section>
+  <!-- 
+  <section class="mt-16 xl:mt-32">
     <div class="container">
-      <h2>Frequenty Asked Questions</h2>
+      <h3>Frequently Asked Questions</h3>
+      <p class="pt-2">Missing the answer you're looking for? Contact us.</p>
+      <div class="flex gap-2 mt-5 items-center">
+        <NuxtLink to="/demo"
+          class="group no-underline border-2 border-tint rounded-full px-6 py-[6px] text-ink flex items-center gap-4 cursor-pointer transition-colors duration-200 hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+          Mail Us
+        </NuxtLink>
+      </div>
+
+      <div class="flex justify-center items-center">
+        <div class="accordion-single s-acc-single w-full max-w-[800px] rounded-2xl">
+          <div class="accordion-single-item js-acc-item bg-muted/10  rounded-2xl my-4">
+            <h6 class="accordion-single-title js-acc-single-trigger text-ink">
+              How is this platform priced this low?
+            </h6>
+            <div class="accordion-single-content">
+              <p>
+                We focus on one job: find leads, send emails, and summarise replies. No bloated CRM or unused modules,
+                which keeps infra, support, and your price low.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-single-item js-acc-item bg-muted/10  rounded-2xl my-4">
+            <h6 class="accordion-single-title js-acc-single-trigger text-ink">
+              What do I get in the free plan?
+            </h6>
+            <div class="accordion-single-content">
+              <p>
+                You can store up to 50 contacts, run one outbound campaign, search for a niche, and get basic AI reply
+                summaries. Ideal for testing or very small lists.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-single-item js-acc-item bg-muted/10  rounded-2xl my-4">
+            <h6 class="accordion-single-title js-acc-single-trigger text-ink">
+              When do I need the Plus plan?
+            </h6>
+            <div class="accordion-single-content">
+              <p>
+                When you’re sending regularly, need more contacts and campaigns, and want AI to write emails, analyse
+                replies, and show which campaigns are actually working.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-single-item js-acc-item bg-muted/10  rounded-2xl my-4">
+            <h6 class="accordion-single-title js-acc-single-trigger text-ink">
+              How do you keep costs predictable?
+            </h6>
+            <div class="accordion-single-content">
+              <p>
+                We batch AI calls, avoid background jobs you didn’t trigger, and cap intensive actions per plan. You pay
+                based on clear usage, not surprise overages.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-single-item js-acc-item bg-muted/10  rounded-2xl my-4">
+            <h6 class="accordion-single-title js-acc-single-trigger text-ink">
+              Can I use it on mobile and desktop?
+            </h6>
+            <div class="accordion-single-content">
+              <p>
+                Yes. It works on web, tablet, and mobile so one person can build lists while another handles replies,
+                wherever they are.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-single-item js-acc-item bg-muted/10  rounded-2xl my-4">
+            <h6 class="accordion-single-title js-acc-single-trigger text-ink">
+              Do you store my emails forever?
+            </h6>
+            <div class="accordion-single-content">
+              <p>
+                No. We keep the conversation context and metadata needed for summaries and analytics. We don’t need to
+                keep raw data longer than necessary to power your account.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-single-item js-acc-item bg-muted/10  rounded-2xl my-4">
+            <h6 class="accordion-single-title js-acc-single-trigger text-ink">
+              Can this work for agencies or solo founders?
+            </h6>
+            <div class="accordion-single-content">
+              <p>
+                Yes. Agencies, SaaS founders, recruiters, and consultants can all use it to find prospects, automate
+                email outreach, and get clear next steps for every reply.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section> -->
 
-  <section class="bg-surface mt-20">
-    <div class="container py-6 xl:py-12">
-      <div class="grid grid-cols-12 gap-8 items-center">
-        <div class="col-span-12 xl:col-span-6 mt-6 pb-12">
-          <div class="col-span-12">
-            <div class="flex justify-start items-start">
-              <div class=" rounded-full">
-                <h6 class="!font-semibold !text-[13px] tracking-wider uppercase text-ink/60">
-                  How We Do It
-                </h6>
-              </div>
-            </div>
-          </div>
-          <div class="text-start max-w-2xl mt-2">
-            <h3 class="text-3xl md:text-4xl font-semibold text-ink leading-tight">
-              Powered by the world's most advanced AI models.
-            </h3>
-            <p class="pt-4 text-lg text-ink/70 leading-relaxed">
-              From Whisper to GPT-4, plus some of our inhouse magic code sprinkled in.
-            </p>
-          </div>
-        </div>
-        <div class="col-span-12 xl:col-span-6 rounded-xl xl:flex grid grid-cols-12 items-center gap-6">
-              <div class="rounded-2xl w-fit col-span-6">
-            <NuxtImg src="/claude.png" alt="ExpiryAware logo" width="200" height="100%" />
-          </div>
-          <div class="rounded-2xl w-fit col-span-6">
-            <NuxtImg src="/gpt.png" alt="ExpiryAware logo" width="200" height="100%" />
-          </div>
-          <!-- <div class="rounded-2xl w-fit">
-            <NuxtImg src="/whisper.png" alt="ExpiryAware logo" width="120" height="100%" />
-          </div> -->
-          <div class="rounded-2xl w-fit xl:me-8 col-span-6">
-            <NuxtImg src="/gemini.png" alt="ExpiryAware logo" width="200" height="100%" />
-          </div>
-      
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-12 xl:py-32">
-    <div class="container">
-      <div class="grid grid-cols-12 items-center text-center xl:text-start gap-6">
-        <div class="col-span-12 col-start-2 xl:col-span-5 xl:col-start-3">
-          <h3>Learn how to leverage AI
-            Let's connect.</h3>
-        </div>
-        <div class="col-span-12 col-start-4 xl:col-span-4 xl:col-start-9">
-          <NuxtLink to="/contact-us"
-            class="group no-underline border-2 w-fit border-primary rounded-full ps-4 pe-2 py-2 text-primary flex items-center gap-4 cursor-pointer transition-colors duration-200 hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
-            Contact Us
-            <span
-              class="bg-primary text-white rounded-full p-2 transition-colors duration-200 group-hover:bg-white group-hover:text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
-                stroke="currentColor" class="size-4 transition-transform duration-200 group-hover:-rotate-45">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-            </span>
-          </NuxtLink>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="fixed right-0 top-1/2 -translate-y-1/2 bg-surface px-4 py-6 rounded-l-md z-50 cursor-pointer">
-    <div class="flex flex-col gap-16 items-center">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-        class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
-      </svg>
-
-      <h6 class="!text-[14px] text-ink [writing-mode:vertical-rl] rotate-180 tracking-wide">
-        Talk!
-      </h6>
-    </div>
-  </div>
 
 </template>
+
+
+<script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+
+
+let triggers: HTMLElement[] = []
+
+const toggleAccordion = (event: Event) => {
+  const thisItem = (event.currentTarget as HTMLElement).parentNode as HTMLElement
+  const items = document.querySelectorAll<HTMLElement>('.js-acc-item')
+
+  items.forEach((item) => {
+    if (item === thisItem) {
+      item.classList.toggle('is-open')
+    } else {
+      item.classList.remove('is-open')
+    }
+  })
+}
+
+onMounted(() => {
+  triggers = Array.from(document.querySelectorAll<HTMLElement>('.js-acc-single-trigger'))
+  triggers.forEach((t) => t.addEventListener('click', toggleAccordion))
+})
+
+onBeforeUnmount(() => {
+  triggers.forEach((t) => t.removeEventListener('click', toggleAccordion))
+})
+
+const containerRef = ref<any>(null)
+const activeIndex = ref(0)
+
+const features = [
+  {
+    title: 'Lead Generation',
+    body: 'Find companies that match your niche and uncover new opportunities instantly.',
+    image: '/outdoor.png',
+  },
+  {
+    title: 'Niche Prospecting',
+    body: 'Filter by tech stack, industry, or location so you only reach out to the right people.',
+    image: '/desert.avif',
+  },
+  {
+    title: 'Reply Insights',
+    body: 'Scan replies, get quick summaries, and see which messages actually convert.',
+    image: '/peoples.jpg',
+  },
+  {
+    title: 'Advanced Data Visualisation',
+    body: "Get clean dashboards that reveal which emails land, which don't visually.",
+    image: '/peoples.jpg',
+  },
+  
+]
+
+const swiper = useSwiper(containerRef, {
+  slidesPerView: 'auto',
+  spaceBetween: 0,
+  on: {
+    afterInit(s: any) {
+      activeIndex.value = s.realIndex ?? s.activeIndex ?? 0
+    },
+    slideChange(s: any) {
+      activeIndex.value = s.realIndex ?? s.activeIndex ?? 0
+    },
+  },
+})
+
+</script>
+
+<style lang="css">
+swiper-slide {
+  width: auto;
+  height: auto;
+}
+
+swiper-container::part(container) {
+  overflow: visible;
+}
+</style>

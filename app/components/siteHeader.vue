@@ -3,13 +3,13 @@
     <nav class="hidden xl:flex items-center justify-between container py-4" aria-label="Primary">
       <NuxtLink to="/" class="flex items-center gap-2 no-underline">
         <NuxtImg src="/logo.png" alt="ExpiryAware logo" width="32" height="32" />
-        <h6>ExpiryAware</h6>
+        <h6>LeadMail</h6>
       </NuxtLink>
 
       <ul class="flex items-center gap-2 font-primary list-none">
 
         <li>
-          <NuxtLink to="/about" :aria-current="isActive('/about') ? 'page' : undefined" class="nav-link hover:bg-gray-200 rounded-full py-2 px-3"
+          <NuxtLink to="" :aria-current="isActive('/about') ? 'page' : undefined" class="nav-link hover:bg-gray-200 rounded-full py-2 px-3"
             :class="isActive('/about') ? 'text-primary font-medium' : 'hover:underline'">About</NuxtLink>
         </li>
 
@@ -21,7 +21,7 @@
 
 
         <li>
-          <NuxtLink to="/contact" :aria-current="isActive('/contact') ? 'page' : undefined" class="nav-link hover:bg-gray-200 rounded-full py-2 px-3" 
+          <NuxtLink to="" :aria-current="isActive('/contact') ? 'page' : undefined" class="nav-link hover:bg-gray-200 rounded-full py-2 px-3" 
             :class="isActive('/contact') ? 'text-primary font-medium' : 'hover:underline'">Contact Us</NuxtLink>
         </li>
       </ul>
@@ -46,7 +46,7 @@
     <nav class="xl:hidden container flex items-center justify-between py-3" aria-label="Primary">
       <NuxtLink to="/" class="flex items-center gap-2 no-underline">
         <NuxtImg src="/logo.png" alt="ExpiryAware logo" width="20" height="20" />
-        <h6>ExpiryAware</h6>
+        <h6>LeadMail</h6>
       </NuxtLink>
 
       <button
@@ -70,13 +70,13 @@
         <div class="px-6 py-4 flex flex-col gap-6 font-primary">
           <NuxtLink to="/" class="nav-link" :class="isActive('/') ? 'text-primary font-medium' : 'hover:underline'"
             @click="open = false">Home</NuxtLink>
-          <NuxtLink to="/about" class="nav-link"
+          <NuxtLink to="" class="nav-link"
             :class="isActive('/about') ? 'text-primary font-medium' : 'hover:underline'" @click="open = false">About
           </NuxtLink>
           <NuxtLink to="/demo" class="nav-link"
             :class="isActive('/demo') ? 'text-primary font-medium' : 'hover:underline'" @click="open = false">Demo
           </NuxtLink>
-          <NuxtLink to="/contact" class="nav-link"
+          <NuxtLink to="" class="nav-link"
             :class="isActive('/contact') ? 'text-primary font-medium' : 'hover:underline'" @click="open = false">Contact
             Us</NuxtLink>
 

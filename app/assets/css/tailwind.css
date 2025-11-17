@@ -3,32 +3,56 @@
 @tailwind utilities;
 
 body {
-  background-color: #F8F8F8;
+  background-color: #FFF;
 }
 
 .prose {
   max-width: none !important;
 }
 
+.accordion-single  {
+  margin-top: 10px;
+}
 
-.title::before {
-  content:url('https://uimand.top/img/arrow-icon.svg');
+.accordion-single-title {
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  font-size: 20px;
+  margin: 0;
+}
+
+.accordion-single-title::after{
+  content: "";
   position: absolute;
-  right: 20px;
-
-  transition: all 0.2s;
+  right: 25px;
+  top: 50%;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: solid 2px #999;
+  border-right: solid 2px #999;
+  transform: translateY(-50%) rotate(135deg);
 }
 
-.content {
+.accordion-single-content {
   max-height: 0;
-  transition: max-height 0.2s;
+  overflow: hidden;
+  transition: max-height .3s ease-in-out;
 }
 
-.toggle:checked + .title + .content {
-  max-height: 500px;
+.accordion-single-content p {
+  padding: 0px 20px 20px 20px;
+  font-size: 18px;
 }
-.toggle:checked + .title::before {
-  transform: rotate(180deg) !important;
+
+.accordion-single-item.is-open .accordion-single-content  {
+  max-height: 150px;
+}
+
+.accordion-single-item.is-open .accordion-single-title::after  {
+  transform: translateY(-50%) rotate(315deg);
 }
 
 /* Minimal, neutral slider styling to match the screenshot */

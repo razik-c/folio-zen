@@ -1,11 +1,12 @@
+import calendar
 from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
-from datetime import datetime
-from typing import List
-import re
+from datetime import datetime, date
+import dateparser
+from typing import List, Optional
 
 from db import engine, Base, SessionLocal, Product
 
@@ -19,92 +20,29 @@ client = OpenAI(api_key=api_key)
 app = FastAPI()
 
 
-class ProductItem(BaseModel):
-    sku: str
-    product_name: str
-    expiry_date: str
-    count: int
-
-
-class ParseRequest(BaseModel):
-    text: str
-
-
+# ---------- STARTUP ----------
 @app.on_event("startup")
 def on_startup():
     Base.metadata.create_all(bind=engine)
 
 
-@app.post("/parse", response_model=ProductItem)
-def parse_product(payload: ParseRequest):
-    try:
-        resp = client.responses.parse(
-            model="gpt-4o-2024-08-06",
-            input=[
-                {
-                    "role": "system",
-                    "content": (
-                        "You are a structured data extractor. "
-                        "Extract sku, product_name, expiry_date and count. "
-                        "SKU means a short alphanumeric product code like A123, 101B, or SKU-45. "
-                        "Ignore normal words as SKU. "
-                        "If no SKU is present, return an empty string for sku. "
-                        "Always include expiry_date in ISO YYYY-MM-DD. "
-                        "If the year is missing, infer the next future date from today (today is 2025-11-03). "
-                        "If no expiry is found, set expiry_date to ''. "
-                        "Count must be an integer quantity if given, otherwise 0. "
-                        'Respond only with this exact JSON schema: '
-                        '{"sku": "...", "product_name": "...", "expiry_date": "...", "count": 0}'
-                    ),
-                },
-                {"role": "user", "content": payload.text},
-            ],
-            text_format=ProductItem,
-        )
-        item: ProductItem = resp.output_parsed
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-    # fallback count from raw text if model gave 0
-    if item.count == 0:
-        m = re.search(r"\b(\d{1,5})\b", payload.text)
-        if m:
-            item.count = int(m.group(1))
-
-    # derive status
-    status = "Unknown"
-    expiry_date_db = None
-    if item.expiry_date:
-        try:
-            expiry_date_db = datetime.strptime(item.expiry_date, "%Y-%m-%d").date()
-            today = datetime.utcnow().date()
-            if expiry_date_db < today:
-                status = "Expired"
-            elif (expiry_date_db - today).days <= 7:
-                status = "Expiring Soon"
-            else:
-                status = "Fresh"
-        except ValueError:
-            status = "Invalid Date"
-
+# ---------- DB DEP ----------
+def get_db():
     db = SessionLocal()
     try:
-        db_obj = Product(
-            sku=item.sku,
-            product_name=item.product_name,
-            expiry_date=expiry_date_db,
-            count=item.count,
-            status=status,
-            last_checked=datetime.utcnow(),
-            updated_at=datetime.utcnow(),
-        )
-        print(">> inserting", item.sku, item.product_name, item.count)
-        db.add(db_obj)
-        db.commit()
+        yield db
     finally:
         db.close()
 
-    return item
+
+# ---------- Pydantic MODELS ----------
+class DateParseRequest(BaseModel):
+    text: str
+
+
+class DateParseResponse(BaseModel):
+    date: str | None
+    raw: str
 
 
 class ProductOut(BaseModel):
@@ -120,14 +58,92 @@ class ProductOut(BaseModel):
         from_attributes = True
 
 
-def get_db():
-    db = SessionLocal()
+class ProductCreate(BaseModel):
+    sku: str
+    product_name: str
+    # can be ISO "2025-10-20", or natural text like "20 oct 2025", or null
+    expiry_date: Optional[str] = None
+    count: int = 0
+    raw: Optional[str] = None  # accepted but not stored because model has no such column
+
+
+# ---------- DATE PARSE ----------
+@app.post("/date-parse", response_model=DateParseResponse)
+def date_parse(payload: DateParseRequest):
+    raw = payload.text.strip()
+    if not raw:
+        return DateParseResponse(date=None, raw=raw)
+
+    dt = dateparser.parse(
+        raw,
+        settings={
+            "PREFER_DAY_OF_MONTH": "first",
+            "PREFER_DATES_FROM": "future",
+            "DATE_ORDER": "DMY",
+        },
+    )
+
+    if not dt:
+      # second try MDY
+      dt = dateparser.parse(
+          raw,
+          settings={
+              "PREFER_DAY_OF_MONTH": "first",
+              "PREFER_DATES_FROM": "future",
+              "DATE_ORDER": "MDY",
+          },
+      )
+
+    if not dt:
+        return DateParseResponse(date=None, raw=raw)
+
+    # return ISO
+    return DateParseResponse(date=dt.date().isoformat(), raw=raw)
+
+
+def _normalize_expiry(raw_val: Optional[str]) -> Optional[date]:
+    if not raw_val:
+        return None
+
+    # try pure date first
     try:
-        yield db
-    finally:
-        db.close()
+        return date.fromisoformat(raw_val)
+    except ValueError:
+        pass
+
+    # try datetime ISO
+    try:
+        return datetime.fromisoformat(raw_val).date()
+    except ValueError:
+        pass
+
+    # try human text via dateparser
+    dt = dateparser.parse(
+        raw_val,
+        settings={
+            "PREFER_DAY_OF_MONTH": "first",
+            "PREFER_DATES_FROM": "future",
+            "DATE_ORDER": "DMY",
+        },
+    )
+    if not dt:
+        return None
+
+    parsed = dt.date()
+
+    # ensure future-ish: if parsed < today, bump year by 1
+    today = date.today()
+    if parsed < today:
+        try:
+            parsed = parsed.replace(year=today.year + 1)
+        except ValueError:
+            # e.g. 29 Feb
+            pass
+
+    return parsed
 
 
+# ---------- LIST PRODUCTS ----------
 @app.get("/products", response_model=List[ProductOut])
 def list_products(db=Depends(get_db)):
     rows = db.query(Product).order_by(Product.id.desc()).all()
@@ -145,3 +161,32 @@ def list_products(db=Depends(get_db)):
             )
         )
     return out
+
+
+# ---------- CREATE PRODUCT ----------
+@app.post("/products", response_model=ProductOut)
+def create_product(payload: ProductCreate, db=Depends(get_db)):
+    expiry_d = _normalize_expiry(payload.expiry_date)
+
+    obj = Product(
+        sku=payload.sku,
+        product_name=payload.product_name,
+        expiry_date=expiry_d,
+        count=payload.count,
+        status="Fresh",  # instead of "Pending"
+        # do NOT pass last_checked, created_at, updated_at -> DB will fill
+    )
+
+    db.add(obj)
+    db.commit()
+    db.refresh(obj)
+
+    return ProductOut(
+        id=obj.id,
+        sku=obj.sku,
+        product_name=obj.product_name,
+        expiry_date=obj.expiry_date.isoformat() if obj.expiry_date else None,
+        count=obj.count,
+        status=obj.status,
+        last_checked=obj.last_checked.isoformat() if obj.last_checked else None,
+    )

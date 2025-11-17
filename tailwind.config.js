@@ -168,7 +168,7 @@ export default {
             },
             span: {
               fontFamily: theme("fontFamily.secondary").join(","),
-              fontSize: "15 px",
+              fontSize: "15px",
               lineHeight: "22px",
               fontWeight: "500",
               maxWidth: "100ch",

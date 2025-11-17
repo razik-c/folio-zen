@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "nuxt-gtag",
     "nuxt-charts",
+    "nuxt-swiper",
   ],
   plugins: ["@/plugins/chart.js"],
   googleFonts: {
